@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="turn.js"></script>
+		<link rel="stylesheet" type="text/css" href="mystylesheet.css">
+	</head>
+	<body>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap');
+		</style>
+		<div class="container" style="position: relative;">
+			<button id="previous" style="float: left; display: inline-block; z-index: 999;" onclick="$('#flipbook').turn('previous')"> < </button>
+			<button id="next" style="float: right; display: inline-block; z-index: 999;" onclick="$('#flipbook').turn('next')"> > </button>
+			<div id="flipbook" style="display: inline-block;">
+				<div class="hard" id="frontcover" style="font-style: italic;">Open to Find Your Perfect Wedding</div>
+				<div class="hard" id="firstpage">
+					<img src="weddingpic.png"></img>
+					<p style="font-size: larger;">"Where something delicious is always happening."</p>
+					<img src="Sweetheart table.jpg"></img>
+				</div>
+				<div id="statement">
+					<p style="margin-top: 25%;">The following pages are samples of delicious and diverse menu variations. We are known to have the very best value in the First Coast,
+					both in quality of food and excellence in service.</p>
+					<p>Fred Davoli and Chef Fernando Silveira will be very excited to create the perfect wedding menu that fits your specific tastes and budget.</p>
+					<img class="headshot" src="Davoli.jpg"></img>
+					<img class="headshot" src="chef1.jpg"></img>
+				</div>
+				<div>
+					<h2>2020 is Fred Davoli’s Golden Anniversary in the catering industry.</h2>
+					<p>Over the years he has always had a special place in his heart for his
+						brides, and has always treated them as if they were one of his
+						daughters: Rene’, Tisa and Terra. Serving delicious food and excellent
+						service is our goal, and making each bride’s very special day, a
+						delicious and wonderful memory is our passion.</p>
+					<p>We are so excited that our executive chef Fernando Silveira has now
+						been with us for almost two years and has really brought our company
+						to a new level of excellence. Fernando is from Brazil, and has cooked
+						in Italy, and several other countries, and is a master of cooking
+						different foods from around the world. “All the cooks and chefs that I
+						have had over the years have been outstanding and Fernando, I
+						consider the cream of the crop,” says Fred of his executive chef,
+						Fernando.</p>
+					<p>Throughout the years, Davoli’s has been selected to cater for President
+						of the United States, International Entertainers, Willie Nelson, Dionne
+						Warwick, Kenny Rogers, Air Supply, Al Jarreau, REO Speed wagon,
+						Crosby Stills & Nash, Nancy Reagan, the Movies “Dogma,” “Moth-man Prophecies,” and “Temptations for Television;” for Arnold Palmer,
+						tournaments, a three thousand people picnic, political dignitaries,
+						Union banquets and rallies, and some of Pittsburgh’s and
+						Jacksonville’s most prestigious events.</p>
+				</div>
+				<div><img src="Page 2-page-001.jpg"></img></div>
+				<div><img src="Wedding-Brunch-page-001.jpg"></img></div>
+				<div><img src="Page 5-page-001.jpg"></img></div>
+				<div><img src="WeddBuffetComfortFood-page-001.jpg" alt="Wedding Buffet Comfort Food"></img></div>
+				<div><img src="WeddBuffetAffordable-page-001.jpg"></img></div>
+				<div><img src="WeddDinnerStations-page-001.jpg"></img></div>
+				<div><img src="WeddDinnerStations-page-002.jpg" style="padding-top: 1.5em;"></img></div>
+				<div><img src="Hors d oeuvres Selections-page-001.jpg" style="padding-top: 1.5em;"></div>
+				<div><img src="Hors d oeuvres Selections-page-002.jpg" style="padding-top: 1.5em;"></div>
+				<div><img src="Hors d oeuvres Selections-page-003.jpg" style="padding-top: 1.5em;"></div>
+				<div class="hard" style="font-style: italic;">
+					<p id="quote">We hope to be part of your most important celebration. Making your special day
+						more delicious is our passion, and making that simple is our goal.</p>
+				</div>
+				<div class="hard">
+					<img id="back-cover" src="white-tables.jpg"></img>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var userWidth = $(window).width() * .84;
+			var userHeight = $(window).height();
+			$("#flipbook").turn({
+				width: userWidth,
+				height: userHeight,
+				duration: 2050
+			}).turn('next');
+			$(window).width(function(){
+				var win = $(this); //this = window
+				if (win.width() >= 900) {
+					$("#flipbook").turn('display','double');
+				}
+				else {
+					$("#flipbook").turn('display','single');
+				}
+			});
+			$(window).resize(function(){
+				var win = $(this); //this = window
+				if (win.width() >= 900) {
+					$("#flipbook").turn('display','double');
+				}
+				else {
+					$("#flipbook").turn('display','single');
+				}
+			});
+		</script>
+	</body>
+</html>
