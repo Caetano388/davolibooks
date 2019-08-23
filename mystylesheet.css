@@ -7,7 +7,7 @@ body{
 #flipbook{
 		text-align: center;
     width: 84%;
-    height: 100vh;
+    height: 95vh;
 		margin: 0 8%;
 		font-family: 'Playfair Display', serif;
 }
@@ -142,6 +142,19 @@ button#next{
 #statement p{
 	margin: 4em;
 	margin-bottom: 2em;
+}
+
+@media only screen
+and (min-height: 769px) {
+	#anniversary-statement p {
+		line-height: 2.7vh;
+		font-size: 1.7vh;
+	}
+
+	#anniversary-statement h2 {
+		font-size: 4vh;
+		line-height: 5vh;
+	}
 }
 
 p#quote{
